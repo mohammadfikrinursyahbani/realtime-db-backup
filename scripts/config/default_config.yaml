@@ -1,0 +1,10 @@
+username_main: "admin"
+password_main: "admin"
+host: "localhost"
+port: 5432
+database_main: "test_database"
+username_backup: "admin"
+password_backup: "admin"
+host_backup: "localhost"
+port_backup: 5433
+database_backup: "test_database_backup"

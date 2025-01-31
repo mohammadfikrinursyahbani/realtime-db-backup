@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: test_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+  db-backup:
+    image: postgres:latest
+    container_name: postgres_backup_container
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: test_database_backup
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgres_data_backup:/var/lib/postgresql/data
